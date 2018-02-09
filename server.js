@@ -2,7 +2,7 @@ var express=require('express');
 var hbs=require('hbs');
 var app=express();
 
-
+const port=process.env.PORT||3000;
 
 hbs.registerPartials(__dirname+"/partials")
 
@@ -58,4 +58,4 @@ app.get('/about',(req,res)=>{
     year:new Date().getFullYear()
   });
 });
-app.listen(3000) ;
+app.listen(port) ;
